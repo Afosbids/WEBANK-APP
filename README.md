@@ -1,14 +1,21 @@
 ## Building A Service Oriented Web Applications
 
-### For Context
+### PROJECT OVERVIEW
 
-There are two projects to be built and you are expected to choose a project based on your POD. These projects are:
+WeBank is a Fintech Web base application that allows account holders to perform credit and Debit Transactions through an Agent outlet.
 
-1. Digital Wallet System (eWallet) --> (POD A)
-2. Online Banking System (weBank) --> (POD B)
+## FEATURES
+#### Sign Up
+#### Login
+#### Email Transaction Verification
+#### Token Authentication
+#### OTP verification
+#### 
 
-A project description, features to implement and approach to follow are in `POD_A.md` and `POD_B.md` file respectively at the root of this project.
 
-At this point you are expect to checkout `POD_A.md` or `POD_B.md` file depending on your POD.
-
-Happy Hacking ...
+## CONTRIBUTORS
+#### Akoride Olawale 
+#### Olushola Afolayan
+#### Nwokocha Maruche
+#### Msendoo Chile
+#### Sampson Kitigo
