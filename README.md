@@ -4,6 +4,8 @@
 
 WeBank is a Web base Fintech application that allows account holders to perform credit and Debit Transactions through an Agent outlet.
 
+![example workflow](https://github.com/devadevs/week-9-task-python-pod-b/actions/workflows/ci.yml/badge.svg)
+
 ## FEATURES
 
 #### User (client) can sign up.
