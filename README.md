@@ -1,8 +1,8 @@
-## WEBANK FINTECH APPLICATION
+## WEBANK 
 
 # PROJECT OVERVIEW
 
-WeBank is a Fintech Web base application that allows account holders to perform credit and Debit Transactions through an Agent outlet.
+WeBank is a Web base Fintech application that allows account holders to perform credit and Debit Transactions through an Agent outlet.
 
 ## FEATURES
 
