@@ -25,6 +25,18 @@ WeBank is a Web base Fintech application that allows account holders to perform 
 #### Integrate real-time email notification upon credit/debit transaction on the user account.
 
 
+## Runing Docker 
+
+#### Make sure you have docker installed on you local machine or 
+download (mac with intel chip) https://www.docker.com/products/docker-desktop/
+#### Drag and drop into application folder to installed
+#### Run the docker app 
+#### to start server in the container, run `docker-compose up` in a terminal window opened in the same directory as docker-compose.yml file
+#### to stop server in the container, push `control + c` run `docker-compose down` in a terminal window opened in the same directory as docker-compose.yml file
+#### while docker-compose is down, you can run normal commands like migrate, makemigrations, createsuperuser etc like so
+`sudo docker-compose run  web  python manage.py createsuperuser`
+
+
 
 ## CONTRIBUTORS
 #### Akoride Olawale 
