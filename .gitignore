@@ -60,6 +60,9 @@ coverage.xml
 .pytest_cache/
 cover/
 
+data
+data/db
+
 # Translations
 *.mo
 *.pot
@@ -69,6 +72,8 @@ cover/
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
+data
+data/db
 
 # Flask stuff:
 instance/

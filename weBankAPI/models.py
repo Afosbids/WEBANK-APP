@@ -1,4 +1,22 @@
 from django.db import models
+from django.core.validators import MinLengthValidator, MaxLengthValidator
+
+ACCOUNT_TYPE = (
+    ('SAVINGS', 'savings'),
+    ('CURRENT', "current"),
+)
+
+
+# Create your models here.
+class Accounts(models.Model):
+    # customer_id = models.ForeignKey(Transaction, on_delete=models.CASCADE)
+    account_no = models.IntegerField(validators=[MinLengthValidator(10),MaxLengthValidator(10)])
+    account_type = models.CharField(max_length=40, choices=ACCOUNT_TYPE)
+    account_balance = models.FloatField(default=0)
+    
+    def __str__(self):
+        return self.account_no
+    
 from django.contrib.auth.models import (
     AbstractBaseUser,
     BaseUserManager,
@@ -56,8 +74,7 @@ TRANSACTION_TYPE_CHOICES = (
 )
 
 class Transaction(models.Model):
-    # customer_id = models.ForeignKey(Customer, on_delete=models.CASCADE)
-    # staff_id = models.ForeignKey(Agent, on_delete=models.CASCADE)
+    user_id = models.ForeignKey(User, on_delete=models.CASCADE)
     amount = models.DecimalField(decimal_places=2,max_digits=12)
     transaction_type = models.CharField(max_length= 20, choices=TRANSACTION_TYPE_CHOICES)
     timestamp = models.DateTimeField(auto_now_add=True)

@@ -1,6 +1,13 @@
+from rest_framework import serializers
+from .models import Accounts
 from .models import *
 from rest_framework import serializers
 from rest_framework.authtoken.models import Token
+
+class AccountSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Accounts
+        fields = ['account_no', 'account_type']
 
 
 class UserSerializer(serializers.ModelSerializer):
