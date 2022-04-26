@@ -1,5 +1,3 @@
-from rest_framework import serializers
-from .models import Accounts
 from .models import *
 from rest_framework import serializers
 from rest_framework.authtoken.models import Token
