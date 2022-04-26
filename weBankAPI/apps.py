@@ -2,5 +2,5 @@ from django.apps import AppConfig
 
 
 class WebankapiConfig(AppConfig):
-    default_auto_field = "django.db.models.BigAutoField"
-    name = "weBankAPI"
+    default_auto_field = 'django.db.models.BigAutoField'
+    name = 'weBankAPI'

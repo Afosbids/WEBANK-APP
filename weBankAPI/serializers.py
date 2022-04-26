@@ -1,9 +1,6 @@
-from .models import User
+from .models import *
 from rest_framework import serializers
 from rest_framework.authtoken.models import Token
-
-
-
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -21,3 +18,14 @@ class UserSerializer(serializers.ModelSerializer):
         user.save()
         Token.objects.create(user=user)
         return user
+
+class TransactionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Transaction
+        fields = '__all__'
+
+
+class ReportsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Report
+        fields = '__all__'
