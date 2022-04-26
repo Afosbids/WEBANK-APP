@@ -56,8 +56,7 @@ TRANSACTION_TYPE_CHOICES = (
 )
 
 class Transaction(models.Model):
-    customer_id = models.ForeignKey(Customer, on_delete=models.CASCADE)
-    staff_id = models.ForeignKey(Agent, on_delete=models.CASCADE)
+    user_id = models.ForeignKey(User, on_delete=models.CASCADE)
     amount = models.DecimalField(decimal_places=2,max_digits=12)
     transaction_type = models.CharField(max_length= 20, choices=TRANSACTION_TYPE_CHOICES)
     timestamp = models.DateTimeField(auto_now_add=True)
