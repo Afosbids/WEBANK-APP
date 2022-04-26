@@ -8,4 +8,5 @@ from .models import *
 admin.site.register(Accounts)
 admin.site.register(Transaction)
 admin.site.register(Report)
+admin.site.register(User)
 
