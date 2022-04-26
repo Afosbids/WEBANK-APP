@@ -4,6 +4,8 @@
 
 WeBank is a Web base Fintech application that allows account holders to perform credit and Debit Transactions through an Agent outlet.
 
+[![Django CI](https://github.com/decadevs/week-9-task-python-pod-b/actions/workflows/ci.yml/badge.svg)](https://github.com/decadevs/week-9-task-python-pod-b/actions/workflows/ci.yml)
+
 
 ## FEATURES
 
@@ -21,6 +23,18 @@ WeBank is a Web base Fintech application that allows account holders to perform 
 #### Admin can create and delete agent/staff and admin, user accounts.
 #### User can reset password.
 #### Integrate real-time email notification upon credit/debit transaction on the user account.
+
+
+## Runing Docker 
+
+#### Make sure you have docker installed on you local machine or 
+download (mac with intel chip) https://www.docker.com/products/docker-desktop/
+#### Drag and drop into application folder to installed
+#### Run the docker app 
+#### to start server in the container, run `docker-compose up` in a terminal window opened in the same directory as docker-compose.yml file
+#### to stop server in the container, push `control + c` run `docker-compose down` in a terminal window opened in the same directory as docker-compose.yml file
+#### while docker-compose is down, you can run normal commands like migrate, makemigrations, createsuperuser etc like so
+`sudo docker-compose run  web  python manage.py createsuperuser`
 
 
 
