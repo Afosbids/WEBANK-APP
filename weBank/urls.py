@@ -15,8 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from weBankAPI.views import UserListView, UserDetailView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('weBankAPI.urls')),
+    path('user_list/', UserListView.as_view()),
+    path('user_detail/', UserDetailView.as_view()),
 ]

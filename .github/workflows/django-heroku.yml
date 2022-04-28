@@ -1,0 +1,23 @@
+name: Django CI2
+on:
+  push:
+    branches: [ client-views ]
+  pull_request:
+    branches: [ client-views ]
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+      with:
+        fetch-depth: 0
+    - name: login
+      uses: actions/heroku@master
+      env:
+        HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+      with:
+        args: container:login
+    - name: set remote
+      run: git remote set-url origin https://heroku:${{ secrets.HEROKU_API_KEY }}@git.heroku.com/{{ weBankAPI }}.git
+    - name: push and deploy
+      run: git push origin HEAD:master -f

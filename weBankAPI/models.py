@@ -37,7 +37,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     is_superuser = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    otp = models.CharField(max_length=200)
+    otp = models.CharField(max_length=6)
     
     objects = UserManager()
     USERNAME_FIELD = "email"

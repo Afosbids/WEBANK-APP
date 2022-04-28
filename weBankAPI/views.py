@@ -1,5 +1,9 @@
 
 from django.shortcuts import render,HttpResponse
+from rest_framework import generics
+# from rest_framework.permissions import isAunthenticated, AllowAny
+from weBankAPI.serializers import UserSerializer
+from .models import User
 
 
 def home(request):
@@ -8,3 +12,13 @@ def home(request):
 
 
 # Create your views here.
+class UserListView(generics.ListAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+    # permission_classes = isAunthenticated
+    
+
+class UserDetailView(generics.RetrieveAPIView):
+    queryset = User.objects.get()
+    serializer_class = UserSerializer
+    
