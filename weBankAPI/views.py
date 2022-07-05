@@ -15,7 +15,7 @@ def home(request):
 class UserListView(generics.ListAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
-    # permission_classes = isAunthenticated
+    # permission_classes = [isAunthenticated]
     
 
 class UserDetailView(generics.RetrieveAPIView):
